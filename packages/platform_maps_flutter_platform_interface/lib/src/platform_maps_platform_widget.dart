@@ -15,8 +15,7 @@ abstract class PlatformMapsPlatformWidget extends PlatformInterface {
       '`PlatformMapsPlatform.instance` before use. For unit testing, '
       '`PlatformMapsPlatform.instance` can be set with your own test implementation.',
     );
-    final PlatformMapsPlatformWidget platformWidgetDelegate =
-        PlatformMapsPlatform.instance!.createPlatformMapsPlatformWidget(params);
+    final PlatformMapsPlatformWidget platformWidgetDelegate = PlatformMapsPlatform.instance!.createPlatformMapsPlatformWidget(params);
     PlatformInterface.verify(platformWidgetDelegate, _token);
     return platformWidgetDelegate;
   }

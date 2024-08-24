@@ -14,6 +14,8 @@ flutter:
     platforms:
       android:
         default_package: platform_maps_flutter_google_android
+      web:
+        default_package: platform_maps_flutter_google_web
       ios:
         default_package: platform_maps_flutter_apple
 

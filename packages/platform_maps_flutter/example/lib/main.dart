@@ -1,7 +1,14 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:platform_maps_flutter/platform_maps_flutter.dart';
+import 'package:platform_maps_flutter_google_web/platform_maps_flutter_google_web.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  if (kIsWeb) {
+    PlatformMapsGoogleWeb.registerWith(null);
+  }
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -47,8 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         mapType: MapType.satellite,
         onTap: (location) => debugPrint('onTap: $location'),
-        onCameraMove: (cameraUpdate) =>
-            debugPrint('onCameraMove: $cameraUpdate'),
+        onCameraMove: (cameraUpdate) => debugPrint('onCameraMove: $cameraUpdate'),
         compassEnabled: true,
         onMapCreated: (controller) {
           Future.delayed(const Duration(seconds: 2)).then(
@@ -63,9 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               );
-              controller
-                  .getVisibleRegion()
-                  .then((bounds) => debugPrint("bounds: ${bounds.toString()}"));
+              controller.getVisibleRegion().then((bounds) => debugPrint("bounds: ${bounds.toString()}"));
             },
           );
         },

@@ -12,6 +12,9 @@ dependencies:
   platform_maps_flutter:
     path: ../
 
+  platform_maps_flutter_google_web:
+    path: ../../platform_maps_flutter_google_web
+
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
