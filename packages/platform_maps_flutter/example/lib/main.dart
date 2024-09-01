@@ -57,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onCameraMove: (cameraUpdate) => debugPrint('onCameraMove: $cameraUpdate'),
         compassEnabled: true,
         onMapCreated: (controller) {
+          print("Map created!");
           Future.delayed(const Duration(seconds: 2)).then(
             (_) {
               controller.animateCamera(

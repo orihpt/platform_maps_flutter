@@ -55,6 +55,7 @@ class PlatformMap extends StatelessWidget {
             trafficEnabled: trafficEnabled,
             zoomControlsEnabled: zoomControlsEnabled,
             zoomGesturesEnabled: zoomGesturesEnabled,
+            onMapCreated: onMapCreated,
           ),
         );
 
