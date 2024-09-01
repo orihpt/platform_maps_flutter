@@ -1,5 +1,11 @@
 # platform_maps_flutter
 
+## Web notice
+
+**I [(@orihpt)](https://github.com/orihpt) adapted the package for web for a specific project that I am working on. Not all features are tested and I am not planning on maintaining this package. If you want to use it, feel free to do so, but be aware that it may not work as expected.**
+
+----------
+
 A Flutter package that provides a native map to both Android and iOS devices.
 
 The plugin relies on Flutter's mechanism for embedding Android and iOS views. As that mechanism is currently in a developers preview, this plugin should also be considered a developers preview.
