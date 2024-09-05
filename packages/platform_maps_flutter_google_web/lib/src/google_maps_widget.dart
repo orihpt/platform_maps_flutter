@@ -176,6 +176,7 @@ class _PlatformMapState extends State<_PlatformMap> {
       onCameraMoveStarted: widget.onCameraMoveStarted,
       tiltGesturesEnabled: widget.tiltGesturesEnabled,
       rotateGesturesEnabled: widget.rotateGesturesEnabled,
+      webGestureHandling: google_maps.WebGestureHandling.greedy,
       zoomControlsEnabled: widget.zoomControlsEnabled,
       zoomGesturesEnabled: widget.zoomGesturesEnabled,
       scrollGesturesEnabled: widget.scrollGesturesEnabled,
